@@ -1,6 +1,6 @@
 resource "null_resource" "multipass_vm" {
   provisioner "local-exec" {
-    command = "bash ./start.sh"
+    command = "bash ./single.sh"
   }
 
   triggers = {
