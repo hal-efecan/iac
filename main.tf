@@ -12,8 +12,4 @@ resource "null_resource" "multipass_vm" {
     EOT
     interpreter = ["/bin/bash", "-c"]
   }
-
-  triggers = {
-    script_hash = "${filemd5("./scripts/single.sh")}${filemd5("./scripts/docker.sh")}${filemd5("./scripts/portainer.sh")}"
-  }
 }
